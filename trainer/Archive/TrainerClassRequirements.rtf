@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Existing training process description:\
+  1. initialize a criterion -- should be done at initialization\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0   2. initialize a confusion matrix -- should be done at initialization point\
+  3. initialize w, wg \'97 should be done at initialization point\
+  4. create feval function\
+  5. initialize losses table\
+  6. initialize iterNumber\
+  7. announce initiation of the training\
+  8. create learning_rate_step function\
+  9. create printing function\
+  10. create loss logging function\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Object Oriented Analysis for Training process:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 Requirements:\
+1. Provide trained network and debugging information\
+\
+Identify objects:\
+1. trainer - execute training to create a network and debugging information\
+2. debugger - prints out timing (function 1) and debugging (function 2 and 3) information with a given frequency (parameter)\
+3. netExporter - save trained net after given number of iterations (parameter)\
+\
+Describe every object:\
+Trainer:\
+1. Main responsibility - train a network\
+2. Secondary responsibilities:\
+2.1 Track losses\
+2.2 Modify learning rate (1.given number of steps; 2. later look into modifying learning rate based on descend curve)\
+}
